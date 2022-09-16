@@ -1,6 +1,8 @@
 
+
 var dv = document.querySelectorAll("#dv")
 var wd = document.querySelectorAll("#wd")
+var inp = document.querySelectorAll("#inp")
 
 var nd1 = document.querySelector(".nd1")
 var nd2 = document.querySelector(".nd2")
@@ -65,12 +67,13 @@ var inp3 = document.querySelector(".inp3")
 var inp4 = document.querySelector(".inp4")
 var inp5 = document.querySelector(".inp5")
 
+var random = document.querySelector(".random")
 var play = document.querySelector(".play")
+var reset = document.querySelector(".reset")
 var rr = document.querySelector(".rr")
 
+// PLAY
 play.addEventListener("click",function(){
-    
-    var counter = 0
 
     wd1.innerHTML = parseInt(Math.random()*26)
     wd2.innerHTML = parseInt(Math.random()*26)
@@ -78,45 +81,7 @@ play.addEventListener("click",function(){
     wd4.innerHTML = parseInt(Math.random()*26)
     wd5.innerHTML = parseInt(Math.random()*26)
 
-    if(inp1.value == wd1.innerHTML || 
-       inp2.value == wd1.innerHTML ||
-       inp3.value == wd1.innerHTML || 
-       inp4.value == wd1.innerHTML || 
-       inp5.value == wd1.innerHTML){
-        counter++
-    }
-    if(inp1.value == wd2.innerHTML || 
-       inp2.value == wd2.innerHTML ||
-       inp3.value == wd2.innerHTML || 
-       inp4.value == wd2.innerHTML || 
-       inp5.value == wd2.innerHTML){
-        counter++
-    }
-    if(inp1.value == wd3.innerHTML || 
-       inp2.value == wd3.innerHTML ||
-       inp3.value == wd3.innerHTML || 
-       inp4.value == wd3.innerHTML || 
-       inp5.value == wd3.innerHTML){
-        counter++
-    }
-    if(inp1.value == wd4.innerHTML || 
-       inp2.value == wd4.innerHTML ||
-       inp3.value == wd4.innerHTML || 
-       inp4.value == wd4.innerHTML || 
-       inp5.value == wd4.innerHTML){
-        counter++
-    }
-    if(inp1.value == wd5.innerHTML || 
-       inp2.value == wd5.innerHTML ||
-       inp3.value == wd5.innerHTML || 
-       inp4.value == wd5.innerHTML || 
-       inp5.value == wd5.innerHTML){
-        counter++
-    }
-
-    rr.innerHTML = counter
-
-    for(var i of dv)
+    for(var i of dv){
         if(i.innerHTML == wd1.innerHTML ||
             i.innerHTML == wd2.innerHTML ||
             i.innerHTML == wd3.innerHTML ||
@@ -124,24 +89,62 @@ play.addEventListener("click",function(){
             i.innerHTML == wd5.innerHTML){
             i.style.visibility = "hidden"
         }
-    for(var i of wd)
-        if(i.innerHTML == inp1.value ||
-            i.innerHTML == inp2.value ||
-            i.innerHTML == inp3.value ||
-            i.innerHTML == inp4.value ||
-            i.innerHTML == inp5.value){
-            inp1.style.backgroundColor = "#70b3dd"
-            i.style.backgroundColor = "#70b3dd"
-            i.style.transition = "0.5s"
-            inp1.style.transition = "0.5s"
-            inp2.style.transition = "0.5s"
-            inp3.style.transition = "0.5s"
-            inp4.style.transition = "0.5s"
-            inp5.style.transition = "0.5s"
-
+    }
+    for(var j of wd){
+        if(j.innerHTML == inp1.value ||
+            j.innerHTML == inp2.value ||
+            j.innerHTML == inp3.value ||
+            j.innerHTML == inp4.value ||
+            j.innerHTML == inp5.value){
+            j.style.backgroundColor = "#70b3dd"
         }
         else{
-            i.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
+            j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
+            for(var k of inp){
+                k.disabled = true
+            }
+            random.disabled = true
+            play.disabled = true
         }
-           
+    }  
+    for (var k of inp){
+        if(k.value == wd1.innerHTML ||
+           k.value  == wd2.innerHTML ||
+           k.value  == wd3.innerHTML ||
+           k.value  == wd4.innerHTML ||
+           k.value  == wd5.innerHTML){
+           k.style.backgroundColor = "#70b3dd"
+        }
+    }          
+})
+
+// RANDOM
+random.addEventListener("click",function(){
+
+    inp1.value = parseInt(Math.random()*26)
+    inp2.value = parseInt(Math.random()*26)
+    inp3.value = parseInt(Math.random()*26)
+    inp4.value = parseInt(Math.random()*26)
+    inp5.value = parseInt(Math.random()*26)
+})
+
+// RESET
+reset.addEventListener("click",function(){
+
+    for(var i of dv){
+        i.style.visibility = "visible"
+    }
+    for(var j of wd){
+        j.innerHTML = ""
+        j.style.backgroundColor = ""
+        j.style.backgroundImage = ""
+    }
+    for(var k of inp){
+        k.disabled = false
+        k.value = ""
+        k.style.backgroundColor = "#554786"
+    }
+    random.disabled = false
+    play.disabled = false
+    
 })
