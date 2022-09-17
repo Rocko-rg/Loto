@@ -69,6 +69,28 @@ var random = document.querySelector(".random")
 var play = document.querySelector(".play")
 var reset = document.querySelector(".reset")
 
+
+for(var i of dv){
+    i.addEventListener("click", function(){
+
+        if(inp1.value == "") {
+            inp1.value = this.innerHTML
+        }  
+        else if(inp2.value == "") {
+            inp2.value = this.innerHTML
+        }
+        else if(inp3.value == "") {
+            inp3.value = this.innerHTML
+        }  
+        else if(inp4.value == "") {
+            inp4.value = this.innerHTML
+        }  
+        else if(inp5.value == "") {
+            inp5.value = this.innerHTML
+        }
+    }) 
+}
+
 // PLAY
 play.addEventListener("click",function(){
 
@@ -136,7 +158,6 @@ random.addEventListener("click",function(){
 reset.addEventListener("click",function(){
 
     for(var i of dv){
-        // i.style.visibility = "visible"
         i.style.color = "rgb(228, 228, 228)"
         i.style.backgroundColor = "#554786"
         i.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
