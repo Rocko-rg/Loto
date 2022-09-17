@@ -1,24 +1,26 @@
 body{
-    width: 100%;
     height: 100vh;
-    padding: 0px;
+    padding: 30px 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     background-image: linear-gradient(to top left, #6241ce, #ff93f1);
+    background-repeat: no-repeat;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .ndiv{
     width: 350px;
     height: 320px;
     padding: 10px;
-    margin-top: 30px !important;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 0px 10px;
     box-shadow: inset -10px -10px 15px #ffdffc1f, 
            inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
@@ -36,7 +38,6 @@ body{
     box-shadow: 3px 7px 10px #000000a9;
     background-image: linear-gradient(to top left, #40375f, #787a9b);
     font-weight: 900;
-
 }
 .wn{
     text-align: center;
@@ -45,12 +46,11 @@ body{
     color: rgb(235, 235, 235);
 }
 .wdiv{
-    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 0px 10px;
 }
 #wd{
     width: 50px;
@@ -72,11 +72,12 @@ body{
     color: rgb(235, 235, 235);
 }
 .inpdiv{
-    width: 100%;
+    
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px 10px;
 }
 input{
     width: 45px;
@@ -104,7 +105,7 @@ input:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin: 30px 10px;
 }
 .playdiv{
     width: 80px;
@@ -162,10 +163,10 @@ input:hover{
     cursor: pointer;
     box-shadow: 3px 7px 10px #000000a9;
     background-image: linear-gradient(to top left, #fc84de, #fcb0e9);
-
 }
 .play:focus, .random:focus, .reset:focus{
     margin-bottom: -3px;
     margin-right: -1px;
     box-shadow: 1px 5px 7px #000000a9; 
 }
+
