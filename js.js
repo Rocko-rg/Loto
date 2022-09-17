@@ -84,7 +84,11 @@ play.addEventListener("click",function(){
             i.innerHTML == wd3.innerHTML ||
             i.innerHTML == wd4.innerHTML ||
             i.innerHTML == wd5.innerHTML){
-            i.style.visibility = "hidden"
+            i.style.color = "rgba(255, 255, 255, 0)"
+            i.style.backgroundColor = "rgba(255, 255, 255, 0)"
+            i.style.backgroundImage = "none"
+            i.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
+            i.style.transition = "0.3s"
         }
     }
     for(var j of wd){
@@ -94,9 +98,11 @@ play.addEventListener("click",function(){
             j.innerHTML == inp4.value ||
             j.innerHTML == inp5.value){
             j.style.backgroundColor = "#70b3dd"
+            j.style.boxShadow = "3px 7px 10px #0000009f"
         }
         else{
             j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
+            j.style.boxShadow = "3px 7px 10px #0000009f"
             for(var k of inp){
                 k.disabled = true
             }
@@ -111,6 +117,7 @@ play.addEventListener("click",function(){
            k.value  == wd4.innerHTML ||
            k.value  == wd5.innerHTML){
            k.style.backgroundColor = "#70b3dd"
+
         }
     }          
 })
@@ -129,12 +136,17 @@ random.addEventListener("click",function(){
 reset.addEventListener("click",function(){
 
     for(var i of dv){
-        i.style.visibility = "visible"
+        // i.style.visibility = "visible"
+        i.style.color = "rgb(228, 228, 228)"
+        i.style.backgroundColor = "#554786"
+        i.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
+        i.style.boxShadow = "3px 7px 10px #0000009f"
     }
     for(var j of wd){
         j.innerHTML = ""
         j.style.backgroundColor = ""
         j.style.backgroundImage = ""
+        j.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
     }
     for(var k of inp){
         k.disabled = false
