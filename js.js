@@ -65,6 +65,12 @@ var inp3 = document.querySelector(".inp3")
 var inp4 = document.querySelector(".inp4")
 var inp5 = document.querySelector(".inp5")
 
+inp1.disabled = true
+inp2.disabled = true
+inp3.disabled = true
+inp4.disabled = true
+inp5.disabled = true
+
 var random = document.querySelector(".random")
 var play = document.querySelector(".play")
 var reset = document.querySelector(".reset")
@@ -75,18 +81,23 @@ for(var i of dv){
 
         if(inp1.value == "") {
             inp1.value = this.innerHTML
+            this.style.pointerEvents = "none"
         }  
         else if(inp2.value == "") {
             inp2.value = this.innerHTML
+            this.style.pointerEvents = "none"
         }
         else if(inp3.value == "") {
             inp3.value = this.innerHTML
+            this.style.pointerEvents = "none"
         }  
         else if(inp4.value == "") {
             inp4.value = this.innerHTML
+            this.style.pointerEvents = "none"
         }  
         else if(inp5.value == "") {
             inp5.value = this.innerHTML
+            this.style.pointerEvents = "none"
         }
     }) 
 }
@@ -112,6 +123,7 @@ play.addEventListener("click",function(){
             i.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
             i.style.transition = "0.3s"
         }
+        i.style.pointerEvents = "none"
     }
     for(var j of wd){
         if(j.innerHTML == inp1.value ||
@@ -125,11 +137,17 @@ play.addEventListener("click",function(){
         else{
             j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
             j.style.boxShadow = "3px 7px 10px #0000009f"
-            for(var k of inp){
-                k.disabled = true
-            }
+            // for(var k of inp){
+            //     k.disabled = true
+            // }
             random.disabled = true
             play.disabled = true
+            
+            inp1.disabled = true
+            inp2.disabled = true
+            inp3.disabled = true
+            inp4.disabled = true
+            inp5.disabled = true
         }
     }  
     for (var k of inp){
@@ -152,6 +170,9 @@ random.addEventListener("click",function(){
     inp3.value = parseInt(Math.random()*26)
     inp4.value = parseInt(Math.random()*26)
     inp5.value = parseInt(Math.random()*26)
+    for(var i of dv){
+        i.style.pointerEvents = "none"
+    }
 })
 
 // RESET
@@ -162,6 +183,7 @@ reset.addEventListener("click",function(){
         i.style.backgroundColor = "#554786"
         i.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
         i.style.boxShadow = "3px 7px 10px #0000009f"
+        i.style.pointerEvents = "auto"
     }
     for(var j of wd){
         j.innerHTML = ""
@@ -170,10 +192,16 @@ reset.addEventListener("click",function(){
         j.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
     }
     for(var k of inp){
-        k.disabled = false
+        // k.disabled = false
         k.value = ""
-        k.style.backgroundColor = "#554786"
+        k.style.backgroundColor = "#554786"  
     }
+        inp1.disabled = true
+        inp2.disabled = true
+        inp3.disabled = true
+        inp4.disabled = true
+        inp5.disabled = true
+
     random.disabled = false
     play.disabled = false
     
