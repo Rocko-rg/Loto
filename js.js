@@ -1,5 +1,3 @@
-
-
 var dv = document.querySelectorAll("#dv")
 var wd = document.querySelectorAll("#wd")
 var inp = document.querySelectorAll("#inp")
@@ -70,7 +68,6 @@ var inp5 = document.querySelector(".inp5")
 var random = document.querySelector(".random")
 var play = document.querySelector(".play")
 var reset = document.querySelector(".reset")
-var rr = document.querySelector(".rr")
 
 // PLAY
 play.addEventListener("click",function(){
