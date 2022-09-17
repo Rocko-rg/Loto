@@ -38,6 +38,7 @@ body{
     box-shadow: 3px 7px 10px #0000009f;
     background-image: linear-gradient(to top left, #40375f, #787a9b);
     font-weight: 900;
+    cursor: pointer;
 }
 .wn{
     font-size: 22px;
@@ -115,7 +116,7 @@ input{
     font-family: Arial, Helvetica, sans-serif;
     
 }
-input:hover{
+input:hover, #dv:hover{
     margin-bottom: -2px;
     box-shadow: 2px 5px 7px #0000009f; 
 }
