@@ -1,3 +1,4 @@
+
 var dv = document.querySelectorAll("#dv")
 var wd = document.querySelectorAll("#wd")
 var inp = document.querySelectorAll("#inp")
@@ -137,17 +138,8 @@ play.addEventListener("click",function(){
         else{
             j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
             j.style.boxShadow = "3px 7px 10px #0000009f"
-            // for(var k of inp){
-            //     k.disabled = true
-            // }
             random.disabled = true
             play.disabled = true
-            
-            inp1.disabled = true
-            inp2.disabled = true
-            inp3.disabled = true
-            inp4.disabled = true
-            inp5.disabled = true
         }
     }  
     for (var k of inp){
@@ -157,7 +149,6 @@ play.addEventListener("click",function(){
            k.value  == wd4.innerHTML ||
            k.value  == wd5.innerHTML){
            k.style.backgroundColor = "#70b3dd"
-
         }
     }          
 })
@@ -192,17 +183,9 @@ reset.addEventListener("click",function(){
         j.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
     }
     for(var k of inp){
-        // k.disabled = false
         k.value = ""
         k.style.backgroundColor = "#554786"  
     }
-        inp1.disabled = true
-        inp2.disabled = true
-        inp3.disabled = true
-        inp4.disabled = true
-        inp5.disabled = true
-
     random.disabled = false
     play.disabled = false
-    
 })
