@@ -22,8 +22,8 @@ body{
     border-radius: 5px;
     color: #4b3f75;
     font-weight: 900;
-    box-shadow: -3px -3px 5px #ffe8fd25, 
-        3px 3px 5px #1c1a244d;
+    box-shadow:  -8px -8px 10px #ffdffc2c, 
+            8px 8px 10px rgba(70, 70, 70, 0.226);
 }
 .ndiv{
     width: 330px;
