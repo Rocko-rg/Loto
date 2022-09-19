@@ -11,8 +11,22 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.ndiv{
+.loto{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 350px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    color: #4b3f75;
+    font-weight: 900;
+    box-shadow: -3px -3px 5px #ffe8fd25, 
+        3px 3px 5px #1c1a244d;
+}
+.ndiv{
+    width: 330px;
     height: 320px;
     padding: 10px;
     border-radius: 5px;
@@ -110,6 +124,7 @@ input{
     background-color: #554786;
     color: rgb(228, 228, 228);
     font-weight: 900;
+    
 }
 ::placeholder{
     color: rgba(202, 202, 202, 0.342);
