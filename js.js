@@ -111,7 +111,7 @@ play.addEventListener("click",function(){
     wd3.innerHTML = parseInt(Math.random()*26)
     wd4.innerHTML = parseInt(Math.random()*26)
     wd5.innerHTML = parseInt(Math.random()*26)
-
+    
     for(var i of dv){
         if(i.innerHTML == wd1.innerHTML ||
             i.innerHTML == wd2.innerHTML ||
