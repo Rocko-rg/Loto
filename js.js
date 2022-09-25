@@ -76,94 +76,143 @@ var random = document.querySelector(".random")
 var play = document.querySelector(".play")
 var reset = document.querySelector(".reset")
 
+var counter = 0
 
 for(var i of dv){
     i.addEventListener("click", function(){
-
         if(inp1.value == "") {
             inp1.value = this.innerHTML
             this.style.pointerEvents = "none"
+            this.style.color = "#70b3dd"
+            counter++
         }  
         else if(inp2.value == "") {
             inp2.value = this.innerHTML
             this.style.pointerEvents = "none"
+            this.style.color = "#70b3dd"
+            counter++
         }
         else if(inp3.value == "") {
             inp3.value = this.innerHTML
             this.style.pointerEvents = "none"
+            this.style.color = "#70b3dd"
+            counter++
         }  
         else if(inp4.value == "") {
             inp4.value = this.innerHTML
             this.style.pointerEvents = "none"
+            this.style.color = "#70b3dd"
+            counter++
         }  
         else if(inp5.value == "") {
             inp5.value = this.innerHTML
             this.style.pointerEvents = "none"
+            this.style.color = "#70b3dd"
+            counter++
         }
+        for(var i of dv){
+            if(counter == 5){
+                i.style.pointerEvents = "none"
+            }
+        }
+        for (var k of inp){
+            if(k.value != "" ||
+               k.value  != "" ||
+               k.value  != "" ||
+               k.value  != "" ||
+               k.value  != ""){
+                random.disabled = true
+            }
+        } 
     }) 
 }
 
 // PLAY
 play.addEventListener("click",function(){
-
-    wd1.innerHTML = parseInt(Math.random()*26)
-    wd2.innerHTML = parseInt(Math.random()*26)
-    wd3.innerHTML = parseInt(Math.random()*26)
-    wd4.innerHTML = parseInt(Math.random()*26)
-    wd5.innerHTML = parseInt(Math.random()*26)
+    if(counter == 5){
+        var arr1 = []
+        while(arr1.length != 5){
+            var rand = parseInt(Math.random()*25+1)
+            if(arr1.indexOf(rand) == -1){
+                arr1.push(rand)
+            }
+        }
+        wd1.innerHTML = arr1[0]
+        wd2.innerHTML = arr1[1]
+        wd3.innerHTML = arr1[2]
+        wd4.innerHTML = arr1[3]
+        wd5.innerHTML = arr1[4]
     
-    for(var i of dv){
-        if(i.innerHTML == wd1.innerHTML ||
-            i.innerHTML == wd2.innerHTML ||
-            i.innerHTML == wd3.innerHTML ||
-            i.innerHTML == wd4.innerHTML ||
-            i.innerHTML == wd5.innerHTML){
-            i.style.color = "rgba(255, 255, 255, 0)"
-            i.style.backgroundColor = "rgba(255, 255, 255, 0)"
-            i.style.backgroundImage = "none"
-            i.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
-            i.style.transition = "0.3s"
+        for(var i of dv){
+            if(i.innerHTML == wd1.innerHTML ||
+               i.innerHTML == wd2.innerHTML ||
+               i.innerHTML == wd3.innerHTML ||
+               i.innerHTML == wd4.innerHTML ||
+               i.innerHTML == wd5.innerHTML){
+                i.style.color = "rgba(255, 255, 255, 0)"
+                i.style.backgroundColor = "rgba(255, 255, 255, 0)"
+                i.style.backgroundImage = "none"
+                i.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
+                i.style.transition = "0.3s"
+            }
+            i.style.pointerEvents = "none"
         }
-        i.style.pointerEvents = "none"
-    }
-    for(var j of wd){
-        if(j.innerHTML == inp1.value ||
-            j.innerHTML == inp2.value ||
-            j.innerHTML == inp3.value ||
-            j.innerHTML == inp4.value ||
-            j.innerHTML == inp5.value){
-            j.style.backgroundColor = "#70b3dd"
-            j.style.boxShadow = "3px 7px 10px #0000009f"
-        }
-        else{
-            j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
-            j.style.boxShadow = "3px 7px 10px #0000009f"
-            random.disabled = true
-            play.disabled = true
-        }
-    }  
-    for (var k of inp){
-        if(k.value == wd1.innerHTML ||
-           k.value  == wd2.innerHTML ||
-           k.value  == wd3.innerHTML ||
-           k.value  == wd4.innerHTML ||
-           k.value  == wd5.innerHTML){
-           k.style.backgroundColor = "#70b3dd"
-        }
-    }          
+        for(var j of wd){
+            if(j.innerHTML == inp1.value ||
+               j.innerHTML == inp2.value ||
+               j.innerHTML == inp3.value ||
+               j.innerHTML == inp4.value ||
+               j.innerHTML == inp5.value){
+                j.style.backgroundColor = "#70b3dd"
+                j.style.boxShadow = "3px 7px 10px #0000009f"
+            }
+            else{
+                j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
+                j.style.boxShadow = "3px 7px 10px #0000009f"
+                random.disabled = true
+                play.disabled = true
+            }
+        }  
+        for (var k of inp){
+            if(k.value == wd1.innerHTML ||
+               k.value  == wd2.innerHTML ||
+               k.value  == wd3.innerHTML ||
+               k.value  == wd4.innerHTML ||
+               k.value  == wd5.innerHTML){
+                k.style.backgroundColor = "#70b3dd"
+            }
+        }  
+    }        
 })
 
 // RANDOM
 random.addEventListener("click",function(){
-
-    inp1.value = parseInt(Math.random()*26)
-    inp2.value = parseInt(Math.random()*26)
-    inp3.value = parseInt(Math.random()*26)
-    inp4.value = parseInt(Math.random()*26)
-    inp5.value = parseInt(Math.random()*26)
-    for(var i of dv){
-        i.style.pointerEvents = "none"
+    counter = 5
+    var arr2 = []
+    while(arr2.length != 5){
+        var rand = parseInt(Math.random()*25+1)
+        if(arr2.indexOf(rand) == -1){
+            arr2.push(rand)
+        }
     }
+    inp1.value = arr2[0]
+    inp2.value = arr2[1]
+    inp3.value = arr2[2]
+    inp4.value = arr2[3]
+    inp5.value = arr2[4]
+
+    for(var i of dv){
+        if(i.innerHTML == inp1.value ||
+           i.innerHTML == inp2.value ||
+           i.innerHTML == inp3.value ||
+           i.innerHTML == inp4.value ||
+           i.innerHTML == inp5.value){
+            i.style.color = "#70b3dd"
+            i.style.transition = "0.3s"
+        }
+            i.style.pointerEvents = "none"
+    }
+    random.disabled = true
 })
 
 // RESET
@@ -188,4 +237,5 @@ reset.addEventListener("click",function(){
     }
     random.disabled = false
     play.disabled = false
+    counter = 0
 })
