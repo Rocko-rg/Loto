@@ -1,6 +1,7 @@
+
 body{
     height: 100vh;
-    padding: 30px 0px 100px;
+    padding: 20px 0px 100px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
@@ -12,11 +13,11 @@ body{
     align-items: center;
 }
 .loto{
-    font-size: 28px;
+    font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 290px;
     text-align: center;
     margin: 10px;
     border-radius: 5px;
@@ -26,8 +27,8 @@ body{
             8px 8px 10px rgba(70, 70, 70, 0.226);
 }
 .ndiv{
-    width: 330px;
-    height: 320px;
+    width: 270px;
+    height: 250px;
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -39,30 +40,30 @@ body{
             8px 8px 10px rgba(70, 70, 70, 0.226);
 }
 #dv{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
     margin: 5px;
     background-color: #554786;
     color: rgb(228, 228, 228);
-    box-shadow: 3px 7px 10px #0000009f;
+    box-shadow: 2px 5px 8px #0000009f;
     background-image: linear-gradient(to top left, #40375f, #787a9b);
     font-weight: 900;
     cursor: pointer;
 }
 .wn{
-    font-size: 22px;
-    height: 35px;
+    font-size: 18px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 290px;
     text-align: center;
-    margin: 30px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
     border-radius: 5px;
     color: #4b3f75;
     font-weight: 900;
@@ -77,29 +78,29 @@ body{
     margin: 0px 10px;
 }
 #wd{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
     margin: 5px;
     color: rgb(228, 228, 228);
     font-weight: 900;
-    box-shadow: inset -5px -5px 8px #ffdffc2c, 
-           inset 5px 5px 8px rgba(70, 70, 70, 0.411);
+    box-shadow: inset -4px -4px 6px #ffdffc2c, 
+           inset 4px 4px 6px rgba(70, 70, 70, 0.411);
 }
 .yn{
-    width: 350px;
-    font-size: 22px;
-    height: 35px;
+    width: 290px;
+    font-size: 18px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     text-align: center;
-    margin: 30px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
     color: #4b3f75;
     font-weight: 900;
     box-shadow: -3px -3px 5px #ffe8fd25, 
@@ -107,20 +108,20 @@ body{
 }
 .inpdiv{
     
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px 10px;
 }
 input{
-    width: 45px;
-    height: 45px;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin: 5px;
-    box-shadow: 3px 7px 10px #0000009f;
+    box-shadow: 2px 5px 8px #0000009f;
     background-color: #554786;
     color: rgb(228, 228, 228);
     font-weight: 900;
@@ -132,8 +133,8 @@ input{
     
 }
 input:hover, #dv:hover{
-    margin-bottom: -2px;
-    box-shadow: 2px 5px 7px #0000009f; 
+    margin-bottom: -1px;
+    box-shadow: 1px 3px 5px #0000009f; 
 }
 input:focus{
     outline: none;
@@ -142,67 +143,67 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 10px;
+    margin: 20px 10px;
 }
 .playdiv{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .play{
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     border: none;
     color: white;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 13px;
     cursor: pointer;
-    box-shadow: 3px 7px 10px #0000009f;
+    box-shadow: 2px 5px 8px #0000009f;
     background-image: linear-gradient(to top left, #d855b7, #fd7adc);
 }
 .randomdiv{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .random{
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     border: none;
     color: white;
     font-weight: 900;
-    font-size: 10px;
+    font-size: 8px;
     cursor: pointer;
-    box-shadow: 3px 7px 10px #0000009f;
+    box-shadow: 2px 5px 8px #0000009f;
     background-image: linear-gradient(to top left, #d855b7, #fd7adc);
 }
 .resetdiv{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .reset{
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     border: none;
     color: white;
     font-weight: 900;
-    font-size: 10px;
+    font-size: 8px;
     cursor: pointer;
-    box-shadow: 3px 7px 10px #0000009f;
+    box-shadow: 2px 5px 8px #0000009f;
     background-image: linear-gradient(to top left, #d855b7, #fd7adc);
 }
 .play:focus, .random:focus, .reset:focus{
     margin-bottom: -3px;
     margin-right: -1px;
-    box-shadow: 1px 5px 7px #0000009f; 
+    box-shadow: 1px 3px 5px #0000009f; 
 }
