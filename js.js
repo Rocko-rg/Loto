@@ -1,4 +1,5 @@
 
+
 var dv = document.querySelectorAll("#dv")
 var wd = document.querySelectorAll("#wd")
 var inp = document.querySelectorAll("#inp")
@@ -152,7 +153,7 @@ play.addEventListener("click",function(){
                 i.style.color = "rgba(255, 255, 255, 0)"
                 i.style.backgroundColor = "rgba(255, 255, 255, 0)"
                 i.style.backgroundImage = "none"
-                i.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
+                i.style.boxShadow = "inset -4px -4px 6px #ffdffc2c, inset 4px 4px 6px rgba(70, 70, 70, 0.411)"
                 i.style.transition = "0.3s"
             }
             i.style.pointerEvents = "none"
@@ -164,11 +165,11 @@ play.addEventListener("click",function(){
                j.innerHTML == inp4.value ||
                j.innerHTML == inp5.value){
                 j.style.backgroundColor = "#70b3dd"
-                j.style.boxShadow = "3px 7px 10px #0000009f"
+                j.style.boxShadow = "2px 5px 8px #0000009f"
             }
             else{
                 j.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
-                j.style.boxShadow = "3px 7px 10px #0000009f"
+                j.style.boxShadow = "2px 5px 8px #0000009f"
                 random.disabled = true
                 play.disabled = true
             }
@@ -222,14 +223,14 @@ reset.addEventListener("click",function(){
         i.style.color = "rgb(228, 228, 228)"
         i.style.backgroundColor = "#554786"
         i.style.backgroundImage = "linear-gradient(to top left, #40375f, #787a9b)"
-        i.style.boxShadow = "3px 7px 10px #0000009f"
+        i.style.boxShadow = "2px 5px 8px #0000009f"
         i.style.pointerEvents = "auto"
     }
     for(var j of wd){
         j.innerHTML = ""
         j.style.backgroundColor = ""
         j.style.backgroundImage = ""
-        j.style.boxShadow = "inset -5px -5px 8px #ffdffc2c, inset 5px 5px 8px rgba(70, 70, 70, 0.411)"
+        j.style.boxShadow = "inset -4px -4px 6px #ffdffc2c, inset 4px 4px 6px rgba(70, 70, 70, 0.411)"
     }
     for(var k of inp){
         k.value = ""
